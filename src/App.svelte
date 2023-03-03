@@ -1,17 +1,17 @@
 <script lang="ts">
-  import 'bootswatch/dist/slate/bootstrap.min.css';
+  import 'bootswatch/dist/darkly/bootstrap.min.css';
   import svelteLogo from './assets/svelte.svg'
   import Counter from './lib/Counter.svelte'
-  import { Button, Container, Modal, Card } from 'sveltestrap';
+  import { Button, Container, Modal, Card, Row, Col } from 'sveltestrap';
   let isOpen = false;
   const toggle = () => (isOpen = !isOpen);
 </script>
 
 <main>
   <Container fluid>
-    <h3 class="bg-light">.container-fluid</h3>
-    <div class="row">
-      <Card  class="col-5">
+    <Row>
+      <Col>
+      <Card class="col-5 ml-auto">
         <img src="https://i.ytimg.com/vi/NUJIRujygvY/hqdefault.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -35,11 +35,11 @@
               class="img-fluid"
             />
           </Modal>
-      </Card>
-      
+      </Card>      
+      </Col>
 
 
-    </div>
+    </Row>
 
   </Container>
 
